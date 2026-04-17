@@ -172,7 +172,7 @@
 
 @media (max-width: 580px) {
   .hero {
-    padding: 6rem 2rem 4rem;
+    padding: 4rem 1rem;
   }
 
   .hero__actions {
