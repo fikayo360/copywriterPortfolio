@@ -119,7 +119,6 @@
 /* ── Mobile — icon + label stacked ─────────────────────────── */
 @media (max-width: 768px) {
   .nav {
-    display: none;
     padding: 0;
   }
 
