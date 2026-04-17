@@ -1,0 +1,258 @@
+/* ── Contact.css ────────────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
+
+/* ── Section ────────────────────────────────────────────────── */
+.ct {
+  padding: clamp(5rem, 10vw, 9rem) clamp(1.25rem, 5vw, 4rem);
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Centred inner column ───────────────────────────────────── */
+.ct__inner {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Entrance animation ─────────────────────────────────────── */
+.ct-fade {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ct-fade.ct-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Illustration ───────────────────────────────────────────── */
+.ct__illus {
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.ct__illus-svg {
+  width: clamp(120px, 20vw, 180px);
+  height: auto;
+  display: block;
+}
+
+/* ── Heading ────────────────────────────────────────────────── */
+.ct__heading {
+  font-family: "Barlow", sans-serif;
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  line-height: 1.2;
+  text-align: center;
+  color: #111111;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  letter-spacing: -0.02em;
+}
+
+.ct__heading--bold {
+  font-weight: 700;
+}
+
+.ct__heading--light {
+  font-weight: 300;
+  color: #555555;
+}
+
+/* ── Subtext ────────────────────────────────────────────────── */
+.ct__sub {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.8rem, 1.2vw, 0.88rem);
+  color: #888888;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  line-height: 1.7;
+}
+
+/* ── Form ───────────────────────────────────────────────────── */
+.ct__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.4rem, 2.5vw, 1.8rem);
+}
+
+/* ── Field ──────────────────────────────────────────────────── */
+.ct__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ct__label {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: #111111;
+  letter-spacing: 0.01em;
+}
+
+/* ── Input ──────────────────────────────────────────────────── */
+.ct__input {
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid #cccccc;
+  border-radius: 0;
+  padding: 0.5rem 0 0.6rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  color: #111111;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.25s ease;
+}
+
+.ct__input::placeholder {
+  color: #bbbbbb;
+}
+
+.ct__input:focus {
+  border-bottom-color: #111111;
+}
+
+/* ── Select wrapper ─────────────────────────────────────────── */
+.ct__select-wrap {
+  position: relative;
+}
+
+.ct__select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid #cccccc;
+  border-radius: 0;
+  padding: 0.5rem 2rem 0.6rem 0;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  color: #111111;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.25s ease;
+}
+
+.ct__select:focus {
+  border-bottom-color: #111111;
+}
+
+.ct__select option[value=""] {
+  color: #bbbbbb;
+}
+
+.ct__select-arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: #888888;
+  pointer-events: none;
+}
+
+/* ── Submit button ──────────────────────────────────────────── */
+.ct__btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  background-color: #111111;
+  color: #cfcdcd;
+  border: none;
+  border-radius: 999px;
+  padding: clamp(0.85rem, 2vw, 1.05rem) 2rem;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.25s ease, transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.ct__btn:hover:not(:disabled) {
+  background-color: #f78db5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(249, 168, 201, 0.4);
+}
+
+.ct__btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ct__btn--loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── Success state ──────────────────────────────────────────── */
+.ct__success {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.ct__success-icon {
+  font-size: 2rem;
+  color: #f9a8c9;
+  animation: ct-spin 2s linear infinite;
+}
+
+.ct__success p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: #333333;
+}
+
+@keyframes ct-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Mobile ─────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .ct {
+    padding: 4rem 1.25rem;
+  }
+
+  .ct__inner {
+    max-width: 100%;
+  }
+}
+
+/* ── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .ct-fade {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .ct__btn,
+  .ct__input,
+  .ct__select {
+    transition: none;
+  }
+
+  .ct__success-icon {
+    animation: none;
+  }
+}

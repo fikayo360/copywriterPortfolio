@@ -1,0 +1,159 @@
+/* ── Testimonials.css ───────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap");
+
+/* ── Section ────────────────────────────────────────────────── */
+.tm {
+  padding: clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 5vw, 4rem);
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Centred inner column ───────────────────────────────────── */
+.tm__inner {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Heading ────────────────────────────────────────────────── */
+.tm__heading {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  color: #111111;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ── Grid ───────────────────────────────────────────────────── */
+.tm__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+  align-items: start;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.tm-card {
+  background-color:transparent;
+  border-radius: 16px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.774);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Card header ─────────────────────────────────────────────── */
+.tm-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.tm-card__avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(0, 0, 0, 0.06);
+}
+
+.tm-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.tm-card__name {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  color: #111111;
+  line-height: 1.2;
+}
+
+.tm-card__company {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.75rem, 1vw, 0.82rem);
+  color: #888888;
+  line-height: 1.2;
+}
+
+/* ── Card body ──────────────────────────────────────────────── */
+.tm-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.tm-card__para {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.88rem, 1.3vw, 0.97rem);
+  line-height: 1.75;
+  color: #333333;
+  margin: 0;
+}
+
+/* ── Entrance animation ─────────────────────────────────────── */
+.tm-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tm-fade.tm-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Tablet (2 columns) ─────────────────────────────────────── */
+@media (max-width: 900px) {
+  .tm__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Mobile (1 column) ──────────────────────────────────────── */
+@media (max-width: 560px) {
+  .tm {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .tm__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tm-card {
+    border-radius: 12px;
+  }
+}
+
+/* ── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .tm-fade {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .tm-card {
+    transition: none;
+  }
+}

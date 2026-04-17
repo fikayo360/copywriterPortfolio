@@ -1,0 +1,105 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Barlow:wght@300;400;500&display=swap");
+
+/* ── Reset & base ───────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* --- Color Palette --- */
+  /* NYT uses an 'off-white' to reduce eye strain compared to pure #ffffff */
+  --bg-primary: #f9f9f9; 
+  --bg-secondary: #ffffff;
+  
+  /* Deep charcoal is used instead of pure black for a softer, premium feel */
+  --text-main: #121212;
+  --text-muted: #666666;
+  --accent-color: #326891; /* Subtle blue for links/actions */
+  --border-color: #111111;
+
+  /* --- Typography Pairing --- */
+  /* Serif: Heading & Storytelling (Authority) */
+  --font-serif: "Playfair Display", Georgia, serif;
+  
+  /* Sans-Serif: Navigation, UI, & Metadata (Clarity) */
+  --font-sans: "Barlow", sans-serif;
+
+  /* --- Spacing & Borders --- */
+  --spacing-unit: 8px;
+  --border-thin: 1px solid var(--border-color);
+  --border-thick: 2px solid var(--text-main);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Base Element Styling --- */
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  margin-bottom: var(--spacing-unit);
+  letter-spacing: -0.02em; /* Tighten slightly for a print look */
+}
+
+/* --- Form Inputs --- */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 12px;
+  border: var(--border-thin);
+  background: var(--bg-secondary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  transition: border 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--text-main); /* Focus turns border dark */
+}
+
+/* --- Buttons --- */
+/* NYT buttons are usually rectangular and 'flat' */
+.btn-primary {
+  background-color: var(--text-main);
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  border: var(--border-thin);
+  padding: 10px 24px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  cursor: pointer;
+}
+
