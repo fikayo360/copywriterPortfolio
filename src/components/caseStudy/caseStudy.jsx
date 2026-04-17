@@ -1,7 +1,6 @@
 import './caseStudy.css'
 
 import React, { useEffect, useRef } from "react";
-import "./CaseStudy.css";
 
 // ── Sample case study data — swap out with props or a router param ──
 export const caseStudyData = {
