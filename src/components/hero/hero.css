@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 60vh;
   padding: 6rem 2rem 4rem;
   box-sizing: border-box;
 }
@@ -170,10 +170,9 @@
   }
 }
 
-/* ─── Responsive ────────────────────────────────────────────── */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .hero {
-    padding: 5rem 1.25rem 3rem;
+    padding: 6rem 2rem 4rem;
   }
 
   .hero__actions {
@@ -187,3 +186,4 @@
     text-align: center;
   }
 }
+
