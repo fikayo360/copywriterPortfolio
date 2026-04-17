@@ -125,9 +125,6 @@
 
 /* ── Tablet (2 columns) ─────────────────────────────────────── */
 @media (max-width: 900px) {
-  .tm{
-    display: none;
-  }
   .tm__grid {
     grid-template-columns: repeat(2, 1fr);
   }

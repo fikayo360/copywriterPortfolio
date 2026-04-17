@@ -27,7 +27,7 @@ const Hero = () => {
       <Navbar />
      <div className="hero__content">
         <h1 className="hero__greeting">
-          Hi, I'm <span className="hero__name">fikayo</span>
+          Hi, I'm <span className="hero__name"></span>
           <span className="hero__avatar" aria-hidden="true">
             <img
               src="./fikayo.png"
