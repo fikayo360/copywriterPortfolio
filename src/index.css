@@ -105,3 +105,11 @@ input:focus {
   cursor: pointer;
 }
 
+
+@media (max-width: 768px) {
+  :root{
+    transform: scale(0.94);
+    transform-origin: top center;
+    width: 106.5%;
+  }
+}
