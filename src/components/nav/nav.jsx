@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from "react";
+import { House, User, Briefcase, Wrench, Mail } from "lucide-react";
 import "./nav.css";
 
 const navLinks = [
-  { label: "Home",    href: "#home"},
-  { label: "About",   href: "#about"},
-  { label: "Works",   href: "#works"},
-  { label: "Skills",  href: "#skills"},
-  { label: "Contact", href: "#contact" },
+  { label: "Home",    href: "#home", icon:<House size={20}/> },
+  { label: "About",   href: "#about", icon:<User size={20}/>},
+  { label: "Works",   href: "#works", icon:<Briefcase size={20}/>},
+  { label: "Skills",  href: "#skills", icon:<Wrench size={20} />},
+  { label: "Contact", href: "#contact", icon:<Mail size={20}/> },
 ];
 
 const Navbar = () => {

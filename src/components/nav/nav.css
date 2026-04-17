@@ -35,7 +35,7 @@
 .nav__pill {
   position: relative;
   background-color: #ffffff;
-  border: 0.5px solid var(--border-color);
+  border: 0.5px solid grey;
   border-radius: 999px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
   padding: 0.3rem;
@@ -117,16 +117,16 @@
 }
 
 /* ── Mobile — icon + label stacked ─────────────────────────── */
-@media (max-width: 580px) {
+@media (max-width: 768px) {
   .nav {
     padding: 0;
   }
 
   .nav__pill {
-    width: 100%;
+     width: calc(100% - 1rem);
     max-width: 580px;
-    border-radius: 0px;
-    padding: 0;
+    border-radius: 30px;
+    padding: 0 1rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
   }
 
